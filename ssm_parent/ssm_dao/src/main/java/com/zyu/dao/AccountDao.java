@@ -25,4 +25,10 @@ public interface AccountDao {
     @Select("select * from account where id = #{id}")
     Account findById(int id);
 
+
+
+
+
+    Account findByName(String name);
+
 }
