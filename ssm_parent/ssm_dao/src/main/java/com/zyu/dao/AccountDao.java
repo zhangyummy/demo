@@ -21,7 +21,8 @@ public interface AccountDao {
     //@Insert("insert into account (id,name,money) values (#{id}, #{name}, #{money})")
     @Insert("insert into account (name,money) values (#{name}, #{money})")
     void saveAccount(Account account);
-    
 
+    @Select("select * from account where id = #{id}")
+    Account findById(int id);
 
 }
